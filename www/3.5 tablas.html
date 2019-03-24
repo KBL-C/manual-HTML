@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Manual HTML</title>
+
+</head>
+
+<body>
+    <div id="3.5">
+
+        <h2>Tablas</h2>
+        <h3>3.5.1 Definición de una tabla</h3>
+        <p>Las tablas son elementos recurrentes dentro del mundo de la informática, siendo una parte fundamental
+            en programas como los basados en hojas de cálculo, las bases de datos o los procesadores de texto.
+            En HTML es similar, puesto que este lenguaje nos permite crearlas, como veremos, a nuestro antojo.
+        </p>
+        <p>Para la creación de una tabla, será necesario el uso de varias etiquetas, que nos permitirán definir
+            la propia tabla, las filas y columnas y otros atributos que nos permitirán adaptar el aspecto de ésta
+            al que deseemos.
+        </p>
+        <p>Para la creación de una tabla, usaremos: <strong>&lt;table&gt;</strong>, la cual se deberá cerrar con
+            <strong>&lt;/table&gt;</strong> al
+            final de todo lo relacionado con cada tabla. Es por ello que entre estas dos etiquetas se encontraran tanto
+            atributos
+            como todos los datos que la conformen.
+        </p>
+
+
+
+
+        <h3>3.5.2 Aspectos básicos de una tabla</h3>
+        <p>Con las etiquetas de la tabla ya definida convendrá definir una fila con <strong>&lt;tr&gt;</strong> y
+            <strong>&lt;/tr&gt;</strong>, la cual
+            contendrá información de todas las celdas, dispuestas en columnas y definidas con la etiqueta <strong>&lt;td&gt;</strong>
+            y <strong>&lt;/td&gt;</strong>.
+            Junto a ello, en la etiqueta <strong>&lt;table&gt;</strong> incluiremos el atributo "<strong>border=X</strong>" donde X será
+            un número y denotará el ancho del borde de la tabla. Asimismo, podremos usar la etiqueta <strong>rules=Y</strong> con los siguientes parámetros.
+            <ul>
+                <li>none: No habrá líneas en los bordes.</li>
+                <li>groups: Únicamente líneas en los grupos.</li>
+                <li>rows: Los bordes serán entre filas.</li>
+                <li>cols: Los bordes serán entre columnas.</li>
+                <li>all: Se dibujarán todos los bordes dentro de la tabla.</li>
+            </ul>
+        </p>
+        <p>
+            Por ejemplo:
+            <br>&lt;table border=1&gt;
+            <br> &emsp; &lt;tr&gt;
+            <br> &emsp; &emsp; &lt;td&gt;&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Lunes&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Martes&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Miércoles&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Jueves&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Viernes&lt;/td&gt;
+            <br> &emsp; &lt;tr&gt;
+
+            <br> &emsp; &lt;tr&gt;
+            <br> &emsp; &emsp; &lt;td&gt;8:15&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Programación&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Programación&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;FOL&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Programación&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Lenguajes de Marcas&lt;/td&gt;
+            <br> &emsp; &lt;tr&gt;
+
+            <br> &emsp; &lt;tr&gt;
+            <br> &emsp; &emsp; &lt;td&gt;9:15&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Programación&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Programación&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Entornos de Desarrollo&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Programación&lt;/td&gt;
+            <br> &emsp; &emsp; &lt;td&gt;Lenguajes de Marcas&lt;/td&gt;
+            <br> &emsp; &lt;tr&gt;
+
+            <br>&lt;/table&gt;
+        </p>
+
+        <p>Veamos el resultado:</p>
+        <table border=1>
+            <tr>
+                <td></td>
+                <td>Lunes</td>
+                <td>Martes</td>
+                <td>Miércoles</td>
+                <td>Jueves</td>
+                <td>Viernes</td>
+            </tr>
+            <tr>
+                <td>8:15</td>
+                <td>Programación</td>
+                <td>Programación</td>
+                <td>FOL</td>
+                <td>Programación</td>
+                <td>Lenguajes de Marcas</td>
+            </tr>
+            <tr>
+                <td>9:15</td>
+                <td>Programación</td>
+                <td>Programación</td>
+                <td>Entornos de Desarrollo</td>
+                <td>Programación</td>
+                <td>Lenguajes de Marcas</td>
+            </tr>
+        </table>
+
+
+
+
+
+        <h3>3.5.3 Celdas de cabecera</h3>
+        <p>En ciertas ocasiones, conviene que nuestra diferencie las celdas por aquellas que reflejen la cabecera del
+            resto de la celda.
+            <br>Para ello, en aquellas que lo necesitemos, sustituiremos la etiqueta <strong>&lt;tr&gt;</strong> por
+            <strong>&lt;tr&gt;</strong>
+            y su correspondiente finalización.
+        </p>
+
+        <p>Basándonos en el mismo ejemplo, celdas como la que contiene a Lunes u 8:15 pueden adoptar esta forma,
+            quedando la tabla así:</p>
+        <table border=1>
+            <tr>
+                <th></th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr>
+                <th>8:15</th>
+                <td>Programación</td>
+                <td>Programación</td>
+                <td>FOL</td>
+                <td>Programación</td>
+                <td>Lenguajes de Marcas</td>
+            </tr>
+            <tr>
+                <th>9:15</th>
+                <td>Programación</td>
+                <td>Programación</td>
+                <td>Entornos de Desarrollo</td>
+                <td>Programación</td>
+                <td>Lenguajes de Marcas</td>
+            </tr>
+        </table>
+
+
+
+
+
+        <h3>3.5.4 Títulos en tablas</h3>
+        <p>HTML permite, usando la etiqueta &lt;caption&gt; poner un título a una tabla, de forma simple. Veámoslo con
+            otro sencillo ejemplo:</p>
+        <br>&lt;table border=1&gt;
+        <br> &emsp; &lt;caption&gt;Título de mi tabla&lt;/caption&gt;
+        <br> &emsp; &lt;tr&gt;
+        <br> &emsp; &emsp; &lt;th&gt;Proyecto&lt;/th&gt;
+        <br> &emsp; &emsp; &lt;td&gt;Manual HTML&lt;/td&gt;
+        <br> &emsp; &lt;tr&gt;
+
+        <br> &emsp; &lt;tr&gt;
+        <br> &emsp; &emsp; &lt;th&gt;Versión&lt;/th&gt;
+        <br> &emsp; &emsp; &lt;td&gt;1.0&lt;/td&gt;
+        <br> &emsp; &lt;tr&gt;
+
+        <br>&lt;/table&gt;
+        </p>
+
+        <table border=1>
+            <caption>Título de mi tabla</caption>
+            <tr>
+                <th>Proyecto</th>
+                <td>Manual HTML</td>
+            <tr>
+            <tr>
+                <th>Versión</th>
+                <td>1.0</td>
+            <tr>
+        </table>
+
+
+
+        <h3>3.5.5 Agrupación de elementos en una tabla</h3>
+        <p>En ciertas ocasiones, conviene crear tablas que diferencien de forma más clara sus distintas secciones. HTML
+            nos lo pone fácil, gracias a
+            etiquetas que nos ayudarán, de forma sencilla, a diferenciar dichas secciones, tanto a la hora de crear la
+            tabla como en su visualización.
+        </p>
+        <p>Para ello, disponemos de tres etiquetas:
+            <ul>
+                <li>&lt;thead&gt;&lt;/thead&gt;</li>
+                <li>&lt;tfoot&gt;&lt;/tfoot&gt;</li>
+                <li>&lt;tbody&gt;&lt;/tbody&gt;</li>
+            </ul>
+            Cada una de ellas contendrá las etiquetas necesarias para diferenciar una zona de la otra. En el siguiente
+            ejemplo se podrán apreciar
+            las posibilidades de estas etiquetas:
+        </p>
+
+        <br>&lt;table border=1 rules=groups&gt;
+        <br> &emsp; &lt;caption&gt;Commits hechos&lt;/caption&gt;
+        <br> &emsp; &lt;thead&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;&lt;/th&gt;
+        <br> &emsp; &emsp; &emsp; &lt;td&gt;Desarrollador 1&lt;/td&gt;
+        <br> &emsp; &emsp; &emsp; &lt;td&gt;Desarrollador 2&lt;/td&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &lt;/thead&gt;
+
+        <br> &emsp; &lt;tfoot&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;Total&lt;/th&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;14&lt;/th&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;13&lt;/th&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &lt;/tfoot&gt;
+
+        <br> &emsp; &lt;tbody&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;Semana 1&lt;/th&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;6&lt;/th&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;9&lt;/th&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;Semana 2&lt;/th&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;8&lt;/th&gt;
+        <br> &emsp; &emsp; &emsp; &lt;th&gt;4&lt;/th&gt;
+        <br> &emsp; &emsp; &lt;tr&gt;
+        <br> &emsp; &lt;/tbody&gt;
+
+        <br>&lt;/table&gt;
+
+        <p>El resultado sería:</p>
+        <table border=1 rules=groups>
+              <caption>Commits hechos</caption>
+              <thead>
+                    <tr>
+                          <th></th>
+                          <td>Desarrollador 1</td>
+                          <td>Desarrollador 2</td>
+                        <tr>
+                      </thead>
+              <tfoot>
+                    <tr>
+                          <th>Total</th>
+                          <th>14</th>
+                          <th>13</th>
+                        <tr>
+                      </tfoot>
+              <tbody>
+                    <tr>
+                          <th>Semana 1</th>
+                          <th>6</th>
+                          <th>9</th>
+                        <tr>
+                        <tr>
+                          <th>Semana 2</th>
+                          <th>8</th>
+                          <th>4</th>
+                        <tr>
+                      </tbody>
+        </table>
+
+        <h3>3.5.6 Combinación de celdas</h3>
+        <p>En ciertas tablas, necesitaremos combinar celdas, para ello, dentro de los &lt;td&gt; podremos usar los atributos 
+            <strong>colspan="X"</strong> y <strong>rowspan="Y"</strong>, los cuales unirán, en el primer caso, celdas hacia la derecha, mientras
+            que en el segundo serán celdas hacia abajo, según el número que introduzcamos en X e Y.
+        </p>
+
+        <table border="1" width="100%">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+                <td rowspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <h3>3.5.7 Tablas dentro de tablas</h3>
+            <p>Para ofrecer mayor posibilidad al creador de una página web, se ofrece la posibilidad de crear una tabla dentro de otra tabla. Para 
+                ello se introducirán todas las etiquetas de una tabla dentro de un <strong>&lt;td&gt;</strong> o <strong>&lt;th&gt;</strong>.
+            </p>
+    </div>
+</body>
+
+</html>
